@@ -360,6 +360,15 @@ html {
   }
 }
 @media (max-width: 357px) {
+   .style1 h3 {
+    font-size: 17px;
+  }
+  .style1 p {
+    font-size: 13px;
+  }
+  .style1 a {
+    font-size: 13px;
+  }
   .box7 {
     width: 300px;
   }
