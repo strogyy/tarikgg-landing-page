@@ -227,17 +227,10 @@ html {
   }
 }
 
-.main-container {
-  margin: 40px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  margin-bottom: 100px;
-}
 .box {
   margin: 20px auto;
   border-radius: 5px;
-  width: 380px;
+  max-width: 380px;
   height: 96px;
   background-color: red;
 }
@@ -245,24 +238,44 @@ html {
 .style1 {
   background-image: linear-gradient(
     to bottom left,
-    rgb(32, 10, 10),
+    rgb(17, 11, 11),
     rgb(150, 35, 35)
   );
+  overflow: hidden;
 }
-
 .box-container {
   display: flex;
-  margin: 20px;
-  justify-content: space-between;
-  align-items: center;
+  position: relative;
 }
+.box-background {
+  position: absolute;
+  font-size: 85px;
+  top: -15px;
+  color: rgba(255, 25, 25, 0.233);
+  left: -31px;
+}
+.box-background-yt {
+  left: -60px;
+  top: -21px;
+  font-size: 100px;
+}
+.box-background-twitter {
+  left: -60px;
+  top: -21px;
+  font-size: 100px;
+}
+
+.boxlside {
+  z-index: 2;
+}
+
 .box-container h3 {
-  color: #e2a9b0;
+  color: #ebc1c6;
   font-size: 20px;
   margin-bottom: -4px;
 }
 .box-container p {
-  color: #cf545d;
+  color: #df6870;
   font-weight: 500;
   font-size: 14px;
 }
@@ -289,14 +302,14 @@ html {
 }
 
 .boxtop img {
-  width: 368px;
+  max-width: 368px;
   height: 184px;
   margin-bottom: 10px;
   border-radius: 5px;
 }
 .box7 {
-  height: 450px;
-  width: 380px;
+  height: auto;
+  max-width: 380px;
   background-image: linear-gradient(
     to bottom left,
     rgb(15, 15, 15),
@@ -304,12 +317,12 @@ html {
   );
   border: 1px solid rgba(51, 51, 51, 0.582);
   box-shadow: 0px 5px 2px 2px rgba(0, 0, 0, 0.39);
+  transition: 0.3s;
 }
 .box7:hover {
-  transition: 0.3s;
   cursor: pointer;
   transform: translateY(-5px);
-  box-shadow: 0px 9px 3px 3px rgba(0, 0, 0, 0.39);
+  box-shadow: 0px 8px 2px 2px rgba(0, 0, 0, 0.39);
 }
 
 .box-container-style2 {
@@ -340,14 +353,9 @@ html {
 }
 
 @media (max-width: 401px) {
-  .box7 {
-    height: auto;
-    width: 350px;
-  }
-
   .boxtop img {
-    width: 335px;
     height: 160px;
+    max-width: 270px;
     margin-bottom: 5px;
   }
 
@@ -358,9 +366,18 @@ html {
   .vidbox {
     height: auto;
   }
+  .box-container-style2 {
+    height: auto;
+  }
+  .boxbottom h3 {
+    font-size: 17px;
+  }
+  .boxbottom p {
+    font-size: 15.5px;
+  }
 }
 @media (max-width: 357px) {
-   .style1 h3 {
+  .style1 h3 {
     font-size: 17px;
   }
   .style1 p {
@@ -368,14 +385,6 @@ html {
   }
   .style1 a {
     font-size: 13px;
-  }
-  .box7 {
-    width: 300px;
-  }
-
-  .boxtop img {
-    width: 290px;
-    margin-bottom: 3px;
   }
 
   .ytvid {
@@ -385,7 +394,6 @@ html {
 
 .footer {
   border-top: 1px solid rgba(255, 0, 0, 0.452);
-
   height: 500px;
   background-image: linear-gradient(
     to bottom left,
@@ -511,10 +519,42 @@ html {
 }
 
 .ply {
+  color: red;
   margin-right: 10px;
   display: none !important;
 }
 
 .link a:hover > .ply {
   display: inline-block !important;
+}
+
+.main-container {
+  width: 100%;
+  height: 100%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.main-columns {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 40px;
+}
+.box-container {
+  display: flex;
+  margin: 20px;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (max-width: 320px) {
+  .box7 {
+    max-width: 280px;
+  }
+
+  .box {
+    max-width: 280px;
+  }
+  .ytvid {
+    max-width: 265px;
+  }
 }
