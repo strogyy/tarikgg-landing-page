@@ -11,7 +11,7 @@ body {
   min-height: 100%;
 }
 .container {
-  max-width: 1300px;
+  max-width: 1248px;
   margin: auto;
 }
 html {
@@ -22,7 +22,7 @@ html {
   background-attachment: fixed;
 }
 .navbar-top {
-  padding: 20px;
+  padding: 20px 0px;
   background-color: #060606bb;
 }
 .navbar-top-container {
@@ -98,7 +98,7 @@ html {
 }
 
 .navbar-bottom {
-  padding: 25px;
+  padding: 25px 0px;
   background-color: #06060683;
 }
 
@@ -148,7 +148,6 @@ html {
 }
 
 @media (max-width: 768px) {
-  /***************************/
   .navbar-bottom {
     padding: 40px;
   }
@@ -165,8 +164,6 @@ html {
     transform: rotate(-40deg);
     margin-top: -6px;
   }
-
-  /***************************/
   .navbar-top {
     display: none;
   }
@@ -227,11 +224,30 @@ html {
   }
 }
 
+.main-container {
+  width: 100%;
+  height: 100%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  align-items: center;
+}
+.main-columns {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.box-container {
+  display: flex;
+  margin: 20px;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .box {
-  margin: 20px auto;
+  margin: 0px 0px 24px 0px;
   border-radius: 5px;
-  max-width: 380px;
-  height: 96px;
+  max-width: 384px;
+  height: 95.5px;
   background-color: red;
 }
 
@@ -352,20 +368,41 @@ html {
   height: 380px;
 }
 
-@media (max-width: 401px) {
-  .boxtop img {
-    height: 160px;
-    max-width: 270px;
-    margin-bottom: 5px;
+.link {
+  width: 230px;
+}
+
+.link a:hover {
+  color: red;
+  transition: 0.3s;
+  position: relative;
+  animation-duration: 0.2s;
+  animation-name: effectforlink;
+  padding: 12px;
+}
+
+@keyframes effectforlink {
+  0% {
+    left: -20px;
   }
 
-  .ytvid {
-    width: 335px;
-    height: 160px;
+  100% {
+    left: 0px;
   }
-  .vidbox {
-    height: auto;
-  }
+}
+
+.ply {
+  color: red;
+  margin-right: 10px;
+  display: none !important;
+  font-size: 20px;
+}
+
+.link a:hover > .ply {
+  display: inline-block !important;
+}
+
+@media (max-width: 401px) {
   .box-container-style2 {
     height: auto;
   }
@@ -386,9 +423,53 @@ html {
   .style1 a {
     font-size: 13px;
   }
+}
 
+@media (max-width: 1280px) {
+  .container {
+    max-width: 992px;
+  }
+  .main-columns {
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+}
+@media (max-width: 767px) {
+  .main-columns {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media (max-width: 1024px) {
+  .main-columns {
+    justify-content: space-between;
+  }
+  .container {
+    max-width: 992px;
+  }
+  .box7,
+  .box {
+    max-width: 298.66px;
+    height: auto;
+  }
   .ytvid {
-    width: 290px;
+    max-width: 282px;
+  }
+  .boxtop img {
+    max-width: 282px;
+    height: 150px;
+    margin-bottom: 0px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .container {
+    max-width: 736px;
+  }
+  .main-columns {
+    justify-content: space-around;
   }
 }
 
@@ -404,6 +485,7 @@ html {
 .footer-links a {
   color: gray;
 }
+
 .linkLine {
   width: 130px;
   height: 3px;
@@ -411,23 +493,11 @@ html {
   background-image: linear-gradient(90deg, #cc1424, transparent);
   margin-bottom: 12px;
 }
-.footer-container {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  height: 500px;
-  margin: 0px 20px;
-}
+
 .footer-link h3 {
   color: #ccc;
   margin-bottom: 5px;
 }
-.link-container {
-  display: flex;
-  width: 80%;
-  justify-content: space-around;
-}
-
 .link h3 {
   color: rgba(204, 204, 204, 0.733);
   margin-bottom: 10px;
@@ -443,118 +513,82 @@ html {
 .link li {
   margin-bottom: 13px;
 }
+.footer-links a {
+  margin: 10px;
+  font-size: 18px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 500px;
+}
+
+.link-container {
+  display: flex;
+  width: 65%;
+  justify-content: space-between;
+}
 .logoAndLinks {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-.footerlogo {
-  margin-bottom: 50px;
-  cursor: pointer;
-}
 .footer-links {
-  margin-bottom: 150px;
-  width: 300px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  margin-top: 35px;
 }
-.footer-links a {
-  margin: 10px;
-  font-size: 18px;
-}
-.link {
-  width: 230px;
+.footer-right-part {
+  margin-bottom: 80px;
 }
 
-@media (max-width: 1019px) {
+@media (max-width: 1023px) {
+  .footer-container {
+    height: 700px;
+    margin: 55px 25px 0px 25px;
+  }
   .footer {
     height: auto;
   }
   .footer-container {
     flex-direction: column;
   }
-  .footer-container {
-    height: auto;
-    margin-top: 130px;
-  }
-  .logoAndLinks {
-    margin-top: 30px;
-    height: 200px;
-  }
-  .link {
-    margin-bottom: 30px;
-  }
-  .link {
-    width: auto;
+
+  .link-container {
+    width: 100%;
+    justify-content: space-around;
   }
 }
+
 @media (max-width: 768px) {
   .link-container {
     flex-direction: column;
+    margin-bottom: 50px;
   }
-  .logoAndLinks {
-    margin-top: 90px;
+  .link {
+    margin-bottom: 40px;
+  }
+  .footer {
+    height: 1350px;
   }
 }
+.link p {
+  color: rgb(196, 196, 196);
+  margin-bottom: 5px;
+}
+.link h4 {
+  color: #d9dae5;
+  margin-bottom: 5px;
+}
 
-.link a:hover {
+.link p {
+  margin-bottom: 15px;
+  font-size: 15px;
+}
+
+.arwr {
   color: red;
-  transition: 0.3s;
-  position: relative;
-  animation-duration: 0.4s;
-  animation-name: effectforlink;
-  padding: 5px;
-}
-
-@keyframes effectforlink {
-  0% {
-    left: -20px;
-  }
-
-  100% {
-    left: 0px;
-  }
-}
-
-.ply {
-  color: red;
-  margin-right: 10px;
-  display: none !important;
-}
-
-.link a:hover > .ply {
-  display: inline-block !important;
-}
-
-.main-container {
-  width: 100%;
-  height: 100%;
-  margin-top: 50px;
-  margin-bottom: 50px;
-}
-.main-columns {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  margin: 40px;
-}
-.box-container {
-  display: flex;
-  margin: 20px;
-  justify-content: space-between;
-  align-items: center;
-}
-@media (max-width: 320px) {
-  .box7 {
-    max-width: 280px;
-  }
-
-  .box {
-    max-width: 280px;
-  }
-  .ytvid {
-    max-width: 265px;
-  }
+  margin-left: 14px;
+  font-size: 20px;
 }
